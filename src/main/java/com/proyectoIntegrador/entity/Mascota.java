@@ -12,11 +12,11 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import lombok.Data;
+
 
 @Entity
 @Table(name = "mascota")
-@Data
+
 public class Mascota {
 
 	@Column(name = "idmascota")
@@ -48,4 +48,71 @@ public class Mascota {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "idcliente")
 	private Cliente idCliente;
+
+	public int getIdMascota() {
+		return idMascota;
+	}
+
+	public void setIdMascota(int idMascota) {
+		this.idMascota = idMascota;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public TipoMascota getIdTipoMascota() {
+		return idTipoMascota;
+	}
+
+	public void setIdTipoMascota(TipoMascota idTipoMascota) {
+		this.idTipoMascota = idTipoMascota;
+	}
+
+	public String getRaza() {
+		return raza;
+	}
+
+	public void setRaza(String raza) {
+		this.raza = raza;
+	}
+
+	public String getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+
+	public void setFechaNacimiento(String fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	public String getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
+	}
+
+	public Cliente getIdCliente() {
+		return idCliente;
+	}
+
+	public void setIdCliente(Cliente idCliente) {
+		this.idCliente = idCliente;
+	}
+	
+	
+	
 }

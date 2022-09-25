@@ -7,11 +7,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
 
 @Entity
 @Table(name = "categoria")
-@Data
+
 public class Categoria {
 
 	@Column(name = "idcategoria")
@@ -21,5 +20,24 @@ public class Categoria {
 
 	@Column(name = "nombre")
 	private String nombre;
+
+	public int getIdCategoria() {
+		return idCategoria;
+	}
+
+	public void setIdCategoria(int idCategoria) {
+		this.idCategoria = idCategoria;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	
+	
 
 }

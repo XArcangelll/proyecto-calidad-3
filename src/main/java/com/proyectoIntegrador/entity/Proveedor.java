@@ -11,10 +11,10 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import lombok.Data;
+
 
 @Entity
-@Data
+
 @Table(name = "proveedor")
 public class Proveedor {
 
@@ -32,4 +32,71 @@ public class Proveedor {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "idUbigeo")
 	private Ubigeo idUbigeo;
+
+	public int getIdProveedor() {
+		return idProveedor;
+	}
+
+	public void setIdProveedor(int idProveedor) {
+		this.idProveedor = idProveedor;
+	}
+
+	public String getRazonSocial() {
+		return razonSocial;
+	}
+
+	public void setRazonSocial(String razonSocial) {
+		this.razonSocial = razonSocial;
+	}
+
+	public String getRuc() {
+		return ruc;
+	}
+
+	public void setRuc(String ruc) {
+		this.ruc = ruc;
+	}
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+
+	public String getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
+	public String getCelular() {
+		return celular;
+	}
+
+	public void setCelular(String celular) {
+		this.celular = celular;
+	}
+
+	public String getContacto() {
+		return contacto;
+	}
+
+	public void setContacto(String contacto) {
+		this.contacto = contacto;
+	}
+
+	public Ubigeo getIdUbigeo() {
+		return idUbigeo;
+	}
+
+	public void setIdUbigeo(Ubigeo idUbigeo) {
+		this.idUbigeo = idUbigeo;
+	}
+	
+	
+	
 }

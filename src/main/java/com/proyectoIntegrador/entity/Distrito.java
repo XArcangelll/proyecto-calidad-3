@@ -7,11 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
+
 
 @Entity
 @Table(name = "distrito")
-@Data
+
 public class Distrito {
 	@Column(name = "iddistrito")
 	@Id
@@ -23,4 +23,41 @@ public class Distrito {
 
 	@Column(name = "nombre")
 	private String nombre;
+
+	public Distrito(int idDistrito) {
+		super();
+		this.idDistrito = idDistrito;
+	}
+
+	public Distrito() {
+		super();
+	}
+
+	public int getIdDistrito() {
+		return idDistrito;
+	}
+
+	public void setIdDistrito(int idDistrito) {
+		this.idDistrito = idDistrito;
+	}
+
+	public String getUbigeo() {
+		return ubigeo;
+	}
+
+	public void setUbigeo(String ubigeo) {
+		this.ubigeo = ubigeo;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+
+	
+	
 }

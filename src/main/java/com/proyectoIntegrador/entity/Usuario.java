@@ -7,11 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
+
 
 @Entity
 @Table(name = "usuario")
-@Data
+
 public class Usuario {
 
 	@Column(name = "idusuario")
@@ -27,4 +27,64 @@ public class Usuario {
 
 	@Column(name = "cargo")
 	private String cargo;
+
+	public Usuario(String nomUsuario, String contrasenia, String cargo) {
+		super();
+		this.nomUsuario = nomUsuario;
+		this.contrasenia = contrasenia;
+		this.cargo = cargo;
+	}
+
+	public Usuario(int idUsuario, String nomUsuario, String contrasenia, String cargo) {
+		super();
+		this.idUsuario = idUsuario;
+		this.nomUsuario = nomUsuario;
+		this.contrasenia = contrasenia;
+		this.cargo = cargo;
+	}
+
+	public Usuario(int idUsuario) {
+		super();
+		this.idUsuario = idUsuario;
+	}
+
+	public Usuario() {
+		super();
+	}
+
+	public int getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(int idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+
+	public String getNomUsuario() {
+		return nomUsuario;
+	}
+
+	public void setNomUsuario(String nomUsuario) {
+		this.nomUsuario = nomUsuario;
+	}
+
+	public String getContrasenia() {
+		return contrasenia;
+	}
+
+	public void setContrasenia(String contrasenia) {
+		this.contrasenia = contrasenia;
+	}
+
+	public String getCargo() {
+		return cargo;
+	}
+
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
+	}
+	
+	
+	
+	
 }

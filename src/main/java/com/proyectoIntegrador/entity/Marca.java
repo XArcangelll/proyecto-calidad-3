@@ -8,11 +8,11 @@ import javax.persistence.Id;
 
 import javax.persistence.Table;
 
-import lombok.Data;
+
 
 @Entity
 @Table(name = "marca")
-@Data
+
 public class Marca {
 
 	@Column(name = "idmarca")
@@ -22,4 +22,24 @@ public class Marca {
 
 	@Column(name = "nombre")
 	private String nombre;
+
+	public int getIdMarca() {
+		return idMarca;
+	}
+
+	public void setIdMarca(int idMarca) {
+		this.idMarca = idMarca;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	
+	
+	
 }

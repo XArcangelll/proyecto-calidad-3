@@ -12,11 +12,10 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import lombok.Data;
 
 @Entity
 @Table(name = "reserva")
-@Data
+
 public class Reserva {
 
 	@Column(name = "idreserva")
@@ -47,5 +46,63 @@ public class Reserva {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "idservicio")
 	private Servicio idServicio;
+
+	public int getIdReserva() {
+		return idReserva;
+	}
+
+	public void setIdReserva(int idReserva) {
+		this.idReserva = idReserva;
+	}
+
+	public String getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(String fecha) {
+		this.fecha = fecha;
+	}
+
+	public String getHorario() {
+		return horario;
+	}
+
+	public void setHorario(String horario) {
+		this.horario = horario;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	public Cliente getIdCliente() {
+		return idCliente;
+	}
+
+	public void setIdCliente(Cliente idCliente) {
+		this.idCliente = idCliente;
+	}
+
+	public Mascota getIdMascota() {
+		return idMascota;
+	}
+
+	public void setIdMascota(Mascota idMascota) {
+		this.idMascota = idMascota;
+	}
+
+	public Servicio getIdServicio() {
+		return idServicio;
+	}
+
+	public void setIdServicio(Servicio idServicio) {
+		this.idServicio = idServicio;
+	}
+	
+	
 
 }

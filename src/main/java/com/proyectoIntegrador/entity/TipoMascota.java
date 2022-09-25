@@ -7,11 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
+
 
 @Entity
 @Table(name = "tipomascota")
-@Data
+
 public class TipoMascota {
 
 	@Column(name = "idtipomascota")
@@ -21,5 +21,23 @@ public class TipoMascota {
 
 	@Column(name = "nombre")
 	private String nombre;
+
+	public int getIdTipoMascota() {
+		return idTipoMascota;
+	}
+
+	public void setIdTipoMascota(int idTipoMascota) {
+		this.idTipoMascota = idTipoMascota;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	
 
 }

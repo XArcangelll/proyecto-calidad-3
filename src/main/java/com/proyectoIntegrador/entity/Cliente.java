@@ -12,11 +12,11 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import lombok.Data;
+
 
 @Entity
 @Table(name = "cliente")
-@Data
+
 public class Cliente {
 
 	@Column(name = "idcliente")
@@ -54,4 +54,128 @@ public class Cliente {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "idusuario")
 	private Usuario idUsuario;
+
+	public Cliente(int idCliente, String nombre, String apellido, String direccion, String telefono, String celular,
+			String dni, String email, Distrito idDistrito, Usuario idUsuario) {
+		super();
+		this.idCliente = idCliente;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.direccion = direccion;
+		this.telefono = telefono;
+		this.celular = celular;
+		this.dni = dni;
+		this.email = email;
+		this.idDistrito = idDistrito;
+		this.idUsuario = idUsuario;
+	}
+
+	public Cliente(String nombre, String apellido, String direccion, String telefono, String celular, String dni,
+			String email, Distrito idDistrito, Usuario idUsuario) {
+		super();
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.direccion = direccion;
+		this.telefono = telefono;
+		this.celular = celular;
+		this.dni = dni;
+		this.email = email;
+		this.idDistrito = idDistrito;
+		this.idUsuario = idUsuario;
+	}
+
+	public Cliente(int idCliente) {
+		super();
+		this.idCliente = idCliente;
+	}
+
+	public Cliente() {
+		super();
+	}
+
+	public int getIdCliente() {
+		return idCliente;
+	}
+
+	public void setIdCliente(int idCliente) {
+		this.idCliente = idCliente;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+
+	public String getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
+	public String getCelular() {
+		return celular;
+	}
+
+	public void setCelular(String celular) {
+		this.celular = celular;
+	}
+
+	public String getDni() {
+		return dni;
+	}
+
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Distrito getIdDistrito() {
+		return idDistrito;
+	}
+
+	public void setIdDistrito(Distrito idDistrito) {
+		this.idDistrito = idDistrito;
+	}
+
+	public Usuario getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(Usuario idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+	
+	
+	
+	
+	
+	
 }

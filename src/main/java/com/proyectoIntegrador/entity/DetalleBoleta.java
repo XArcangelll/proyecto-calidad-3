@@ -12,11 +12,11 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import lombok.Data;
+
 
 @Entity
 @Table(name = "detalleboleta")
-@Data
+
 public class DetalleBoleta {
 	
 	@Column(name = "iddetalleboleta")
@@ -39,4 +39,47 @@ public class DetalleBoleta {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "idboleta")
 	private Boleta idBoleta;
+
+	public int getIdDetalleBoleta() {
+		return idDetalleBoleta;
+	}
+
+	public void setIdDetalleBoleta(int idDetalleBoleta) {
+		this.idDetalleBoleta = idDetalleBoleta;
+	}
+
+	public int getCantidad() {
+		return cantidad;
+	}
+
+	public void setCantidad(int cantidad) {
+		this.cantidad = cantidad;
+	}
+
+	public double getCosto() {
+		return costo;
+	}
+
+	public void setCosto(double costo) {
+		this.costo = costo;
+	}
+
+	public Producto getIdProducto() {
+		return idProducto;
+	}
+
+	public void setIdProducto(Producto idProducto) {
+		this.idProducto = idProducto;
+	}
+
+	public Boleta getIdBoleta() {
+		return idBoleta;
+	}
+
+	public void setIdBoleta(Boleta idBoleta) {
+		this.idBoleta = idBoleta;
+	}
+	
+	
+	
 }

@@ -12,11 +12,11 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import lombok.Data;
+
 
 @Entity
 @Table(name = "horariosservicios")
-@Data
+
 public class HorariosServicios {
 	@Column(name = "idhorariosservicios")
 	@Id
@@ -33,4 +33,39 @@ public class HorariosServicios {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "idservicio")
 	private Servicio idServicio;
+
+	public int getIdHorariosServicios() {
+		return idHorariosServicios;
+	}
+
+	public void setIdHorariosServicios(int idHorariosServicios) {
+		this.idHorariosServicios = idHorariosServicios;
+	}
+
+	public String getHorario() {
+		return horario;
+	}
+
+	public void setHorario(String horario) {
+		this.horario = horario;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	public Servicio getIdServicio() {
+		return idServicio;
+	}
+
+	public void setIdServicio(Servicio idServicio) {
+		this.idServicio = idServicio;
+	}
+	
+	
+	
 }
